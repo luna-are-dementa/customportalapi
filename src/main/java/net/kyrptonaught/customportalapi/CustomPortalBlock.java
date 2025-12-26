@@ -103,7 +103,7 @@ public class CustomPortalBlock extends Block implements Portal {
     }
 
     @Override
-    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
+    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler, boolean bl) {
         if (entity.canUsePortals(false)) {
             entity.tryUsePortal(this, pos);
         }
